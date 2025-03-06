@@ -1,0 +1,36 @@
+import numpy as np
+a=np.array([1,2,3])
+b=np.array([[1,2,3],[4,5,6]])
+print("Array a:\n")
+print(a)
+print(" Array b:\n")
+print(b)
+c=a+2
+d=a*3
+e=b+a
+print("c array",c)
+print("d array",d)
+print("e array",e)
+f=a*b[0]
+print("element-wise multiplication of a and b[0]:\n")
+print (f)
+print("basic statistics\n")
+print("mean of b \n",np.mean(b))
+print("sum of b \n",np.sum(b))
+print("max of b \n",np.max(b))
+print("min of b \n",np.min(b))
+print("transpose of b")
+print(np.transpose(b))
+print("slicing and indexing\n")
+print("slicing of first row pf b:\n")
+print(b[0,:])
+print("boolean masking\n")
+mask=b>3
+print("boolean masking of b(values greater than 3)",mask)
+h=np.concatenate((a,b[1]),axis=0)
+print("concatenation of a with b[1]\n",h)
+print("stacking\n")
+vstacked=np.vstack((a,b[1]))
+hstacked=np.hstack((a,b[1]))
+print("vertical stacking",vstacked)
+print("horizontal stacking",hstacked)
